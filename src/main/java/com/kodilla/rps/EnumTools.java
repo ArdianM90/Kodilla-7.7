@@ -26,35 +26,31 @@ public enum EnumTools {
 
     //gettery
     public static String getToolNameByAbbrev(char i) {
-        String s = Arrays.stream(EnumTools.values())
+        return Arrays.stream(EnumTools.values())
                 .filter(o -> o.toolAbbrev == i)
                 .map(Enum::name)
                 .collect(Collectors.toList())
                 .get(0);
-        return s;
     }
-    public static String getToolNameByNumber(int i) {
-        String s = Arrays.stream(EnumTools.values())
+    public static String getToolNameByIndex(int i) {
+        return Arrays.stream(EnumTools.values())
                 .filter(o -> o.toolIndex == i)
                 .map(Enum::name)
                 .collect(Collectors.toList())
                 .get(0);
-        return s;
     }
     public static String[] getWhoToolBeats(String toolName) {
-        String[] s = Arrays.stream(EnumTools.values())
+        return Arrays.stream(EnumTools.values())
                 .filter(o -> o.name().equals(toolName))
                 .map(o -> o.beats).collect(Collectors.toList())
                 .get(0);
-        return s;
     }
 
     public static String[] getWhoBeatsTool(String toolName) {
-        String[] s = Arrays.stream(EnumTools.values())
+        return Arrays.stream(EnumTools.values())
                 .filter(o -> o.name().equals(toolName))
                 .map(o -> o.isBeatenBy).collect(Collectors.toList())
                 .get(0);
-        return s;
     }
 
     //stream

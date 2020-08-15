@@ -46,11 +46,11 @@ public class RpcGame {
                     rndChoice = rnd.nextInt(3);
                 }
             }
-            System.out.println("Przeciwnik wybiera "+EnumTools.getToolNameByNumber(rndChoice));
-            if (toolABeatsToolB(EnumTools.getToolNameByAbbrev(playerChoice), EnumTools.getToolNameByNumber(rndChoice))) {
+            System.out.println("Przeciwnik wybiera "+EnumTools.getToolNameByIndex(rndChoice));
+            if (toolABeatsToolB(EnumTools.getToolNameByAbbrev(playerChoice), EnumTools.getToolNameByIndex(rndChoice))) {
                 System.out.println("Pokonujesz przeciwnika");
                 playerPoints++;
-            } else if (toolABeatsToolB(EnumTools.getToolNameByNumber(rndChoice), EnumTools.getToolNameByAbbrev(playerChoice))) {
+            } else if (toolABeatsToolB(EnumTools.getToolNameByIndex(rndChoice), EnumTools.getToolNameByAbbrev(playerChoice))) {
                 System.out.println("Tracisz punkt");
                 rndPoints++;
             } else {
